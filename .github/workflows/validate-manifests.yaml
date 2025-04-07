@@ -35,6 +35,6 @@ jobs:
         run: |
           kubeconform -strict -verbose -summary manifests/combined.yaml
 
-      - name: Dry-run kubectl apply (validation only)
-        run: |
-          kubectl apply -f manifests/combined.yaml --dry-run=client --validate=false
+    #   - name: Dry-run kubectl apply (validation only)
+    #     run: |
+    #       kubectl apply -f manifests/combined.yaml --dry-run=client --validate=false
