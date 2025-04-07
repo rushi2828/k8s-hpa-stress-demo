@@ -1,0 +1,6 @@
+# Optional local files
+*.log
+*.bak
+*.swp
+.DS_Store
+manifests/*.yaml
