@@ -35,7 +35,12 @@ k8s-hpa-stress-demo/
 
 ```
 kubectl apply -f k8s/namespace.yaml
-kubectl apply -f k8s/
+![image](https://github.com/user-attachments/assets/ef171140-6b30-4153-b8d1-8419da9316a7)
+
+kubectl apply -f k8s/deployment.yaml
+kubectl apply -f k8s/hpa.yaml
+![image](https://github.com/user-attachments/assets/97f30b0a-cab4-46b5-80b5-e9701b599e37)
+
 ```
 
 ---
@@ -56,8 +61,18 @@ This creates enough load to trigger scaling based on the HPA thresholds.
 
 ```
 kubectl get hpa -n hpa-demo --watch
+![image](https://github.com/user-attachments/assets/42aeb5df-d2e5-45f0-818a-003a74804d60)
+![image](https://github.com/user-attachments/assets/3c25b7c4-8d49-4927-a400-0b2d0a39450e)
+
+
 kubectl get pods -n hpa-demo -w
+![image](https://github.com/user-attachments/assets/2afd6f30-fe18-42dd-a640-3f2450ca4419)
+![image](https://github.com/user-attachments/assets/998c3164-ca99-41c5-a4f6-0aad356e2091)
+
+
 kubectl describe hpa cpu-burner-hpa -n hpa-demo
+![image](https://github.com/user-attachments/assets/867dc909-5840-42f9-a6ea-686d1eddff63)
+
 ```
 
 Once load increases, the number of pods should scale from 1 up to 5.
