@@ -22,6 +22,7 @@ jobs:
 
       - name: Kustomize Build
         run: |
+          mkdir -p manifests
           kustomize build k8s/ > manifests/combined.yaml
 
       - name: Install kubeconform
