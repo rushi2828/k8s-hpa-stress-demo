@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cpu-burner
+  namespace: hpa-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cpu-burner
+  template:
+    metadata:
+      labels:
+        app: cpu-burner
+    spec:
+      containers:
+      - name: cpu-burner
+        image: vish/stress
+        args:
+          - "-cpus"
+          - "1"
+        resources:
+          requests:
+            cpu: "100m"
+          limits:
+            cpu: "100m"

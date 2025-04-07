@@ -1,0 +1,2 @@
+mkdir -p cpu-hpa-demo/manifests
+kustomize build cpu-hpa-demo/k8s > cpu-hpa-demo/manifests/all.yaml
