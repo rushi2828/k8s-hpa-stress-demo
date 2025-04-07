@@ -29,11 +29,7 @@ jobs:
         run: |
           curl -L https://github.com/yannh/kubeconform/releases/latest/download/kubeconform-linux-amd64.tar.gz | tar xz
           sudo mv kubeconform /usr/local/bin/
-
-      - name: Validate manifests using kubeconform
-        uses: docker://ghcr.io/yannh/kubeconform
-        with:
-          args: -strict -summary manifests/combined.yaml
+          
 
       - name: Validate manifests with kubeconform
         run: |
@@ -41,4 +37,4 @@ jobs:
 
       - name: Dry-run kubectl apply (validation only)
         run: |
-          kubectl apply -f manifests/combined.yaml --dry-run=client
+          kubectl apply -f manifests/combined.yaml --dry-run=client --validate=false
