@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/8fced0e7-b1b0-4ce8-865c-4b3c7674145d)# 🚀 k8s-hpa-stress-demo [CPU HPA Demo on Kubernetes]
+# 🚀 k8s-hpa-stress-demo [CPU HPA Demo on Kubernetes]
 This project demonstrates how to use the Kubernetes **Horizontal Pod Autoscaler (HPA)** to scale a CPU-intensive container (`vish/stress`) based on **CPU utilization**. It's built and tested to work with [KIND](https://kind.sigs.k8s.io/) and supports GitOps best practices.
 
 ---
